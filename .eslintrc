@@ -1,0 +1,7 @@
+{
+    "extends": ["standard", "plugin:vue/essential"],
+    "rules": {
+        "no-new": 0
+    },
+    "plugins": ["html", "vue"]
+}
