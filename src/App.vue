@@ -1,7 +1,7 @@
-<template>
-  <div id="app">
-    <h1>{{msg}}</h1>
-  </div>
+<template lang="pug">
+  #app
+    img(src="./assets/logo.png")
+    h1 {{msg}}
 </template>
 
 <script>
