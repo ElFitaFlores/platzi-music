@@ -1,12 +1,9 @@
 <template lang="pug">
   #app
-    h1 {{msg}}
-    p {{1 + 1}}
-    p {{'Hola' + 'mundo'}}
-    p {{person.name}}
-    p {{person.name.toUpperCase()}}
-    p {{JSON.stringify(person)}}
-    p {{true ? 'true' : 'false'}}
+    p(v-show="showValue") {{value}}
+    p(v-if="showValue") {{value}}
+    p(v-else-if="false") {{'algo mas'}}
+    p(v-else) {{'lo ultimo'}}
 </template>
 
 <script>
@@ -15,9 +12,8 @@ export default {
   data () {
     return {
       msg: 'Hola mundo',
-      person: {
-        name: 'Rafa'
-      }
+      showValue: true,
+      value: 'Algo'
     }
   }
 }
