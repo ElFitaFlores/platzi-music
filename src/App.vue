@@ -1,9 +1,9 @@
 <template lang="pug">
   #app
-    p(v-show="showValue") {{value}}
-    p(v-if="showValue") {{value}}
-    p(v-else-if="false") {{'algo mas'}}
-    p(v-else) {{'lo ultimo'}}
+    input(v-model="name")
+    p {{name}}
+
+    a(:href="url") Link
 </template>
 
 <script>
@@ -11,9 +11,8 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Hola mundo',
-      showValue: true,
-      value: 'Algo'
+      name: '',
+      url: 'https://platzi.com'
     }
   }
 }
