@@ -1,8 +1,8 @@
 <template lang="pug">
   #app
     input(v-model="name")
-    input(v-model="lastName")
-    p {{fullName}}
+    button(@click="format") format
+    p {{formatName}}
 </template>
 
 <script>
@@ -11,7 +11,8 @@ export default {
   data () {
     return {
       name: '',
-      lastName: ''
+      lastName: '',
+      formatName: ''
     }
   },
   computed: {
@@ -22,6 +23,11 @@ export default {
   watch: {
     name (newVal, oldVal) {
       console.log(newVal, oldVal)
+    }
+  },
+  methods: {
+    format () {
+      this.formatName = this.name.split(' ').join('-')
     }
   }
 }
