@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import EventBus from './plugins/event-bus'
 
+import store from './store'
+
 import msToMm from '@/filters/ms-to-mm'
 
 import routes from '@/routes'
@@ -22,5 +24,6 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   render: h => h(App),
-  router
+  router,
+  store
 })
